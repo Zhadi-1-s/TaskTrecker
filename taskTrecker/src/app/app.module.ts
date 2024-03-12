@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './components/main/main.component';
 import { TaskComponent } from './components/task/task.component';
 import { AllTasksComponent } from './components/all-tasks/all-tasks.component';
+import { CreateTaskComponent } from './components/create-task/create-task.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     TaskComponent,
-    AllTasksComponent
+    AllTasksComponent,
+    CreateTaskComponent
   ],
   imports: [
     BrowserModule,
