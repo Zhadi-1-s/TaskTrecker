@@ -1,11 +1,27 @@
 <div class="left-bar">
-
-</div>
-<div class="container">
     <div class="title">
         <h1>Task Tracker</h1>
     </div>
+    <div class="navigations">
+        <div id="navig">
+            <span>Мои Задачи</span>
+        </div>
+        <div id="navig">
+            <span>Создать Задачу</span>
+        </div>
+    </div>
+</div>
+<div class="container">
     <div class="req">
-        <h2>creating tasks</h2>
+        <div id="inputs">
+            <input type="text" placeholder="Наименование задачи *">
+            <select name="priority">
+                <option value="">Нужно выполнить</option>
+                <option value="">Выполняется</option>
+                <option value="">Выполнено</option>
+            </select>
+            <input type="text" placeholder="Email коллабаратора">
+            <button>Создать</button>
+        </div>
     </div>
 </div>

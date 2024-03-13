@@ -2,8 +2,36 @@
     position: absolute;
     width: 350px;
     height: 100%;
-    border: solid 2px;
+    border-radius: 10px;
     background-color: #252525;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.navigations{
+    position: relative;
+    border: solid white 2px;
+    width: 100%;
+    height: 300px;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navigations #navig{
+    width: 200px;
+    height: 40px;
+    border: solid white 1px;
+   margin-top: 10px;
+}
+.navigations #navig span{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+.navigations #navig span:hover{
+    cursor: pointer;
+    color: gray;
 }
 .container{
     display: flex;
@@ -14,33 +42,65 @@
     width: 700px;
     height: 600px;
     align-items: center;
-    text-align: center;
+   
 }
 .title{
     position: relative;
-    width: 500px;
+    width: 320px;
     height: 60px;
-    left: 80px;
     align-items: center;
     display: flex;
+    flex-direction: column;
+    border: solid white 2px;
+    left: 15px;
+    top: 15px;
     text-align: center;
 }
 .title h1{
     font-size: 50px;
     font-family: Arial, Helvetica, sans-serif;
-    margin-left: 100px;
+   
+    color: white;
 }
 .req{
     position: relative;
     width: 500px;
-    height: 400px;
+    height: 600px;
     border:none;
     box-shadow: 0 0 5pt 2pt #D3D3D3;
     border-radius: 12px;
     left: 80px;
-    top: 50px;
+    top: 30px;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
+}
+.req #inputs{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    border: solid 1px;
+    margin-top: 20px;
+}
+.req #inputs input,select,button{
+    margin-top: 10px;
+    height: 50px;
+    border-radius: 8px;
+}
+.req #inputs input,select:focus{
+    outline: none;
+}
+.req #inputs button{
+    background-color: #252525;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: transform 150ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+}
+.req #inputs button:hover{
+    cursor: pointer;
+    transform: scale(1.005);
 }
