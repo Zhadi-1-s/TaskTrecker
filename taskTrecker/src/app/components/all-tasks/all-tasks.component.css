@@ -1,0 +1,14 @@
+.left-bar{
+    position: absolute;
+    width: 350px;
+    height: 100%;
+    border: solid 1px;
+}
+.main-container{
+    position: absolute;
+    right: 300px;
+    top: 50px;
+    width: 800px;
+    height: 600px;
+    border: solid 2px;
+}
