@@ -1,5 +1,5 @@
 export enum Status {
-    notStarted,
-    inProcces,
-    completed
+    notStarted = 'Не Начал',
+    inProcces = 'В процессе',
+    completed = 'Выполнено'
 }

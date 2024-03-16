@@ -8,6 +8,9 @@ import { TaskComponent } from './components/task/task.component';
 import { AllTasksComponent } from './components/all-tasks/all-tasks.component';
 import { CreateTaskComponent } from './components/create-task/create-task.component';
 
+import { FormsModule } from '@angular/forms';
+import { EnumToArrayPipe } from './shared/pipes/enumToArray.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,9 +21,10 @@ import { CreateTaskComponent } from './components/create-task/create-task.compon
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [EnumToArrayPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
