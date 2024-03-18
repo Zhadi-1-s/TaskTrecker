@@ -17,13 +17,15 @@
 <div class="container">
     <div class="req">
         <div id="inputs">
-            <input type="text" placeholder="Наименование задачи *">
-            <select name="status">
-                <option [value]="null">Выберуите статус</option>
-                <option value="name" *ngFor="let name of enumKeys">{{Status[name]}}</option>
-            </select>
-            <input type="text" placeholder="Email коллабаратора">
-            <button>Создать</button>
+            <form [formGroup]="taskForm">
+                <input type="text" placeholder="Наименование задачи *" formControlName="title">
+                <select name="status" formControlName="status">
+                    <option [value]="null">Выберуите статус</option>
+                    <option [value]="Status[name]" *ngFor="let name of enumKeys">{{Status[name]}}</option>
+                </select>
+                <input type="text" placeholder="Email коллабаратора" formControlName="collabs">
+                <button (click)="createTask()">Создать</button>
+            </form>
         </div>
     </div>
 </div>

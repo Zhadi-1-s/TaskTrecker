@@ -90,6 +90,10 @@ hr{
     text-align: center;
     margin-top: 20px;
 }
+.req #inputs form{
+    display: flex;
+    flex-direction: column;
+}
 .req #inputs input,select,button{
     margin-top: 10px;
     height: 50px;

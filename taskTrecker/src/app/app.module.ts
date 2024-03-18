@@ -8,7 +8,7 @@ import { TaskComponent } from './components/task/task.component';
 import { AllTasksComponent } from './components/all-tasks/all-tasks.component';
 import { CreateTaskComponent } from './components/create-task/create-task.component';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EnumToArrayPipe } from './shared/pipes/enumToArray.pipe';
 
 @NgModule({
@@ -22,7 +22,8 @@ import { EnumToArrayPipe } from './shared/pipes/enumToArray.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [EnumToArrayPipe],
   bootstrap: [AppComponent]
