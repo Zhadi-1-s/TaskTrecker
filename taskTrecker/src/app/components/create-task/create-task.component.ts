@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Status } from 'src/app/shared/models/status';
 import { Task } from 'src/app/shared/models/task';
 import { EnumToArrayPipe } from 'src/app/shared/pipes/enumToArray.pipe';
+import { TaskService } from 'src/app/shared/services/task.service';
 
 @Component({
   selector: 'app-create-task',
@@ -17,7 +18,7 @@ export class CreateTaskComponent implements OnInit {
   Status = Status
   enumKeys = []
   
-  constructor(private fb: FormBuilder,private enumToArray:EnumToArrayPipe){
+  constructor(private fb: FormBuilder,private enumToArray:EnumToArrayPipe,private taskService:TaskService){
 
   }
 
@@ -39,7 +40,7 @@ export class CreateTaskComponent implements OnInit {
           status:formData.status,
           collabs:formData.collabs
         };
-
+        this.taskService.create(newTask)
         console.log('newTaks',newTask);
 
       }
