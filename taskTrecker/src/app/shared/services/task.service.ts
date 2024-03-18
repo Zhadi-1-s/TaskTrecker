@@ -14,14 +14,14 @@ export class TaskService {
     localStorage.setItem('task',JSON.stringify(task))
   }
 
-  getTasks(key:string):Observable<Task[]>{
+  getTasks(key:string):Observable<Task>{
     
     return of(localStorage.getItem(key)).pipe(
       
-      map((tasksJson:String | null) => {
+      map((tasksJson:string | null) => {
         
         if(tasksJson){
-          return JSON.parse(tasksJson) as Task[];
+          return JSON.parse(tasksJson);
         }
         
         else{

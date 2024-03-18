@@ -1,6 +1,7 @@
 import { OnInit } from '@angular/core';
 import { Component} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Status } from 'src/app/shared/models/status';
 import { Task } from 'src/app/shared/models/task';
 import { EnumToArrayPipe } from 'src/app/shared/pipes/enumToArray.pipe';
@@ -18,7 +19,7 @@ export class CreateTaskComponent implements OnInit {
   Status = Status
   enumKeys = []
   
-  constructor(private fb: FormBuilder,private enumToArray:EnumToArrayPipe,private taskService:TaskService){
+  constructor(private fb: FormBuilder,private enumToArray:EnumToArrayPipe,private taskService:TaskService,private router: Router){
 
   }
 
@@ -42,7 +43,8 @@ export class CreateTaskComponent implements OnInit {
         };
         this.taskService.create(newTask)
         console.log('newTaks',newTask);
-
+        this.router.navigate(['tasks'])
+        
       }
       else{
         console.error('Form is invalid')

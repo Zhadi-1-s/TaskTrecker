@@ -10,6 +10,7 @@ import { CreateTaskComponent } from './components/create-task/create-task.compon
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EnumToArrayPipe } from './shared/pipes/enumToArray.pipe';
+import { TaskService } from './shared/services/task.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { EnumToArrayPipe } from './shared/pipes/enumToArray.pipe';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [EnumToArrayPipe],
+  providers: [EnumToArrayPipe,TaskService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

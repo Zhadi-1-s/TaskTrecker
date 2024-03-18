@@ -15,8 +15,7 @@ hr{
     border: solid white 2px;
 }
 .navigations{
-    position: relative;
-    
+    position: relative;  
     width: 100%;
     height: 300px;
     top: 50px;

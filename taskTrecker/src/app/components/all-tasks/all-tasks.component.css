@@ -2,7 +2,58 @@
     position: absolute;
     width: 350px;
     height: 100%;
-    border: solid 1px;
+    border-radius: 10px;
+    background-color: #252525;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+hr{
+    color: white;
+    position: relative;
+    top: 30px;
+    border: solid white 2px;
+}
+.navigations{
+    position: relative;  
+    width: 100%;
+    height: 300px;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navigations #navig{
+    width: 250px;
+    height: 40px;
+    
+   margin-top: 10px;
+}
+.navigations #navig span{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+.navigations #navig span:hover{
+    cursor: pointer;
+    color: gray;
+}
+.title{
+    position: relative;
+    width: 320px;
+    height: 60px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    left: 15px;
+    top: 15px;
+    text-align: center;
+}
+.title h1{
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+   
+    color: white;
 }
 .main-container{
     position: absolute;
@@ -10,5 +61,15 @@
     top: 50px;
     width: 800px;
     height: 600px;
-    border: solid 2px;
+    border-radius: 12px;
+    box-shadow: 0 0 5pt 2pt #D3D3D3;
+    display: flex;
+    flex-direction: column;
+    
+}
+.tasks{
+    width: 97%;
+    height: 50px;
+    border: solid 1px;
+    margin: 10px;
 }
